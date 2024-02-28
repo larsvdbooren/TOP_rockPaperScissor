@@ -1,11 +1,13 @@
 let computerScore = 0;
 let playerScore = 0;
 
+//Pick the choice for Computer
 function getComputerChoice() {
     const choices = [`rock`, `paper`, `scissors`];
     return choice = choices[Math.floor(Math.random() * choices.length)];
 }
 
+//Play a round of Rock, Paper, Scissors
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         console.log(`The result is a tie! You both chose ${playerSelection}. Score: ${playerScore} VS. ${computerScore}`);
@@ -21,6 +23,8 @@ function playRound(playerSelection, computerSelection) {
         console.log(`You've lost this round! ${computerSelection} beats ${playerSelection}. Score: ${playerScore} VS. ${computerScore}`);
     }
 }
+
+//Play 5 games
 for (let i = 1; i <= 5; i++) {
     let games = i;
     console.log(`Running game ${games}`);
@@ -32,6 +36,7 @@ for (let i = 1; i <= 5; i++) {
     playGame();
 }
 
+//Final score
 if (playerScore === computerScore) {
     console.log(`Phew! That was a close one. A tie.`);
 } else if (playerScore > computerScore) {
