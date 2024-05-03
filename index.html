@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
+    <div class="game-wrapper">
+      <h1 class="game-title">Let's play a game of 🪨 📄 ✂️</h1>
+      <div class="score-wrapper">
+        <div class="stats-wrapper">
+          <div class="score-board">
+            <p>Current score:</p>
+            <p class="score-text" id="pScore">0</p>
+            <p class="score-text">vs</p>
+            <p class="score-text" id="cScore">0</p>
+          </div>
+          <div class="score-board">
+            <p class="game-text" id="gameCounter">0</p>
+            <p class="game-text">
+              out of <span class="game-amount"></span> games played
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-item">
+        <h2 id="finalText">...</h2>
+        <button class="game-button is-text-btn" id="restart">
+          Restart game! 🎮
+        </button>
+      </div>
+      <div class="button-wrapper">
+        <button class="game-button is-player" id="rock">🪨</button>
+        <button class="game-button is-player" id="paper">📄</button>
+        <button class="game-button is-player" id="scissors">✂️</button>
+      </div>
+      <div class="score-board is-column" id="startScreen">
+        <label class="game-label" for="quantity"
+          >How many games do you want to play?</label
+        >
+        <input
+          class="game-games"
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          max="10"
+          value="1"
+        />
+        <button class="game-button is-text-btn" id="startBtn">
+          Start game!
+        </button>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
